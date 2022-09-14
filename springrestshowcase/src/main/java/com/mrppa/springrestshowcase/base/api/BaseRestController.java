@@ -1,5 +1,7 @@
 package com.mrppa.springrestshowcase.base.api;
 
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.mrppa.springrestshowcase.base.CustomServiceException;
 import com.mrppa.springrestshowcase.base.ErrorCodes;
@@ -16,7 +19,6 @@ import com.mrppa.springrestshowcase.base.model.BaseModel;
 import com.mrppa.springrestshowcase.base.services.BaseCrudService;
 import com.mrppa.springrestshowcase.base.services.BaseSpecification;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 public class BaseRestController<T extends BaseDao<ID>, U extends BaseModel<ID>, ID> {
 	private Logger logger = LoggerFactory.getLogger(getClass());
@@ -33,6 +35,14 @@ public class BaseRestController<T extends BaseDao<ID>, U extends BaseModel<ID>, 
 		U resObj = service.create(model);
 		logger.info("Result Object {}", resObj);
 		return resObj;
+	}
+
+	@GetMapping("/{id}")
+	public Optional<U> get(@PathVariable ID id) throws CustomServiceException {
+		logger.info("get by id {}", id);
+		Optional<U> optResObj = service.getById(id);
+		logger.info("Result Object {}", optResObj);
+		return optResObj;
 	}
 
 	@PostMapping("/{id}")

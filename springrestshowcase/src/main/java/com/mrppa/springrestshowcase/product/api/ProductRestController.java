@@ -9,8 +9,11 @@ import com.mrppa.springrestshowcase.product.dao.ProductDao;
 import com.mrppa.springrestshowcase.product.model.Product;
 import com.mrppa.springrestshowcase.product.services.ProductService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
 @RestController
 @RequestMapping("/product")
+@SecurityRequirement(name = "Bearer Authentication")
 public class ProductRestController extends BaseRestController<ProductDao, Product, Long> {
 
 	@Autowired

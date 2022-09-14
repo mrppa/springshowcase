@@ -9,8 +9,11 @@ import com.mrppa.springrestshowcase.customer.dao.CustomerDao;
 import com.mrppa.springrestshowcase.customer.model.Customer;
 import com.mrppa.springrestshowcase.customer.services.CustomerService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+
 @RestController
 @RequestMapping("/customer")
+@SecurityRequirement(name = "Bearer Authentication")
 public class CustomerRestController extends BaseRestController<CustomerDao, Customer, Long> {
 
 	@Autowired

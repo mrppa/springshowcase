@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.mrppa.showcase</groupId>
 	<artifactId>parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${revision}</version>
 	<name>Showcase</name>
 	<description>ShowCase</description>
 	<packaging>pom</packaging>
@@ -17,13 +17,19 @@
 		<java.version>12</java.version>
 		<openapi.version>1.6.11</openapi.version>
 		<keycloak.version>19.0.1</keycloak.version>
+		<revision>0.0.1-SNAPSHOT</revision>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>com.mrppa.showcase</groupId>
 				<artifactId>base</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
+				<version>${revision}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.mrppa.showcase</groupId>
+				<artifactId>common</artifactId>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springdoc</groupId>
@@ -39,7 +45,8 @@
 	</dependencyManagement>
 
 	<modules>
-		<module>restapi</module>
+		<module>common</module>
 		<module>base</module>
+		<module>restapi</module>
 	</modules>
 </project>

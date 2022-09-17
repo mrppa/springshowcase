@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.mrppa.showcase.base.CustomServiceException;
-import com.mrppa.showcase.base.ErrorCodes;
+import com.mrppa.showcase.CustomServiceException;
+import com.mrppa.showcase.ErrorCodes;
 import com.mrppa.showcase.base.dao.BaseDao;
 import com.mrppa.showcase.base.model.BaseModel;
 import com.mrppa.showcase.base.services.BaseCrudService;

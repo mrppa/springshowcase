@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.mrppa.showcase.base.CustomServiceException;
+import com.mrppa.showcase.CustomServiceException;
 import com.mrppa.showcase.base.model.SearchBindOpperation;
 import com.mrppa.showcase.base.model.SearchCriteria;
 import com.mrppa.showcase.base.model.SearchOpperation;

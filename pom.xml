@@ -18,6 +18,7 @@
 		<openapi.version>1.6.11</openapi.version>
 		<keycloak.version>19.0.1</keycloak.version>
 		<revision>0.0.1-SNAPSHOT</revision>
+		<modelmapper.version>3.1.0</modelmapper.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -40,6 +41,11 @@
 				<groupId>org.keycloak</groupId>
 				<artifactId>keycloak-spring-boot-starter</artifactId>
 				<version>${keycloak.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.modelmapper</groupId>
+				<artifactId>modelmapper</artifactId>
+				<version>${modelmapper.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

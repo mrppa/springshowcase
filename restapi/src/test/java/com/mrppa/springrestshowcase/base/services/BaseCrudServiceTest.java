@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
-import com.mrppa.showcase.base.CustomServiceException;
+import com.mrppa.showcase.CustomServiceException;
 import com.mrppa.showcase.base.dao.BaseDao;
 import com.mrppa.showcase.base.model.BaseModel;
 import com.mrppa.showcase.base.services.BaseCrudService;

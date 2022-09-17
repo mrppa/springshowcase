@@ -1,4 +1,4 @@
-package com.mrppa.showcase.base;
+package com.mrppa.showcase;
 
 import lombok.Getter;
 

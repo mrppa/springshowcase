@@ -7,14 +7,15 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.mrppa.springrestshowcase.base.CustomServiceException;
-import com.mrppa.springrestshowcase.base.model.SearchBindOpperation;
-import com.mrppa.springrestshowcase.base.model.SearchCriteria;
-import com.mrppa.springrestshowcase.base.model.SearchOpperation;
+import com.mrppa.showcase.base.CustomServiceException;
+import com.mrppa.showcase.base.model.SearchBindOpperation;
+import com.mrppa.showcase.base.model.SearchCriteria;
+import com.mrppa.showcase.base.model.SearchOpperation;
+import com.mrppa.showcase.base.services.BaseSpecification;
+import com.mrppa.showcase.product.dao.ProductDao;
+import com.mrppa.showcase.product.model.Product;
+import com.mrppa.showcase.product.services.ProductService;
 import com.mrppa.springrestshowcase.base.services.BaseCrudServiceTest;
-import com.mrppa.springrestshowcase.base.services.BaseSpecification;
-import com.mrppa.springrestshowcase.product.dao.ProductDao;
-import com.mrppa.springrestshowcase.product.model.Product;
 
 @SpringBootTest
 public class ProductServiceTest extends BaseCrudServiceTest<ProductDao, Product, Long> {
